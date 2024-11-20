@@ -2160,7 +2160,7 @@ p {
   position: relative;
   box-shadow: 0 6px 0 0 #7d3c93 inset;
   background-color: #fefffa;
-  padding: 10px 20px;
+  padding: 10px 0px;
   box-sizing: border-box;
   transform: translate(0, 0);
   max-width: 100%;
@@ -2185,7 +2185,7 @@ p {
   letter-spacing: 1px;
   display: block;
   background-color: #fefffa;
-  margin: 0;
+  margin-left: 10px;
   cursor: pointer;
 }
 .accordion p {
@@ -2231,6 +2231,7 @@ p {
   position: absolute;
   transform: translate(-6px, 0);
   margin-top: 16px;
+  margin-right: 25px;
   right: 0;
 }
 .accordion ul li i:before, .accordion ul li i:after {
