@@ -74,14 +74,14 @@
 
     // Scroll To Animation
     //-------------------------------------------------------------------------------
-    $('body').scrollspy({target: '#navigation-top-1', offset: 88});
+    $('body').scrollspy({target: '#navigation-top-1', offset: 69});
 
     var scrollTo = $(".scroll-to");
 
     scrollTo.click(function (event) {
         $('.modal').modal('hide');
         var position = $(document).scrollTop();
-        var scrollOffset = 87;
+        var scrollOffset = 68;
 
         var marker = $(this).attr('href');
         $('html, body').animate({scrollTop: $(marker).offset().top - scrollOffset}, 'slow');
