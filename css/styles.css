@@ -1,0 +1,1875 @@
+/* TABLE OF CONTENTS
+
+    Author: Daniil Sever
+    Template: Wellnesscenter (Landing Page)
+    Version: 1.0
+
+	  1. Default Configs
+    2. 
+    3. Form Elements
+    4. Buttons
+    6. Scroll Up Btn
+    7. Labels
+    8. Tooltip
+    9. Section
+    10. Navigation Top
+    11. Header Full Screen Img
+    12. Features Img
+    13. Newsletter Simple
+    14. Content Img Left
+    15. Content Img Right
+    16. Product Info
+    17. Tab Content
+    18. Gallery
+    19. Pricing Table
+    20. Review Slider
+    21. Partners
+    22. About Us Large
+    23. Call To Action
+    24. Contact Gmap
+    25. Footer Simple
+    26. Appointment Modal
+    27. Breakpoints / Media Queries
+    28. Change default Nav Breakpoint
+*/
+/* 1. Default Configs
+--------------------------------------------*/
+::selection {
+  background: #7d3c93;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #7d3c93;
+  color: #ffffff;
+}
+html {
+  height: 100%;
+  /*scroll-behavior: smooth;*/
+}
+body {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  line-height: 150%;
+  font-size: 16px;
+  height: 100%;
+  font-weight: 400;
+} 
+#cd-words-wrapperpage {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 150%;
+  color: #575756;
+}
+a {
+  color: #7d3c93;
+}
+a:hover {
+  color: #7d3c93;
+}
+a:active {
+  color: #7d3c93;
+}
+a:visited {
+  color: #7d3c93;
+}
+p {
+  margin: 0 0 5% 0;
+  color: #575756;
+}
+.img-responsive {
+  display: inline-block;
+}
+/* 2. Some Styles 
+--------------------------------------------*/
+.purple-text {
+  color: #7d3c93;
+  font-weight: 400;
+}
+.text-weight {
+  font-weight: 600;
+}
+.accordion {
+  visibility: hidden; 
+  display: none; 
+}  
+/* 3. Form Elements
+--------------------------------------------*/
+.form-control {
+  height: 47px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #e5e9ec;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+}
+/* 4. Buttons
+--------------------------------------------*/
+.btn {
+  font-weight: 500;
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 11px 22px 10px 22px;
+  font-size: 16px;
+}
+.btn i {
+  margin-right: 5px;
+}
+.btn.btn-default {
+  background-color: #b5bcc5;
+  color: #ffffff;
+}
+.btn.btn-default:hover {
+  background-color: #7c8898;
+}
+.btn.btn-success {
+  background-color: #7d3c93;
+  color: #ffffff;
+}
+.btn.btn-success:hover {
+  background-color: #9d62af;
+}
+.btn.btn-lg {
+  font-size: 20px;
+  padding: 15px 23px 13px 23px;
+}
+.btn.navbar-btn {
+  margin: 4px 4px 4px 20px;
+}
+.btn.navbar-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #7d3c93;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transform: scale3d(0.6, 0.6, 1);
+  transform: scale3d(0.6, 0.6, 1);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.btn.navbar-btn:hover {
+  background-color: #fff;
+  color: #7d3c93 !important;
+}
+.btn.navbar-btn:hover::before {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+.btn.btn-color1 {
+  background-color: #7d3c93;
+  color: #ffffff;
+}
+.btn.btn-color1:hover {
+  background-color: #af70c5;
+}
+/* 6. Scroll Up Btn
+--------------------------------------------*/
+.scroll-up-btn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  position: fixed;
+  bottom: 44px;
+  right: 64px;
+  display: none;
+  background-color: #e5d8e9;
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+}
+.scroll-up-btn i {
+  color: #ffffff;
+}
+/* 7. Labels
+--------------------------------------------*/
+.label {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 80%;
+  font-weight: 400;
+}
+.label-default {
+  background-color: #7d3c93;
+}
+/* 8. Tooltip
+--------------------------------------------*/
+.tooltip .tooltip-inner {
+  background-color: #7d3c93;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #7d3c93 !important;
+}
+.tooltip.left .tooltip-arrow {
+  border-left-color: #7d3c93 !important;
+}
+.tooltip.right .tooltip-arrow {
+  border-right-color: #7d3c93 !important;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #7d3c93 !important;
+}
+.my-tooltip {
+  border-bottom: 1px dotted #7d3c93;
+  color: #7d3c93;
+}
+/* 9. Section
+--------------------------------------------*/
+section {
+  padding: 65px 0;
+  background-color: #ffffff;
+}
+/* 10. Navigation Top
+--------------------------------------------*/
+.navigation-top {
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none; 
+  -webkit-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+  padding: 6px 0 6px 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+.navigation-top .navbar-brand {
+  margin-left: 0px !important;
+  padding: 0;
+  height: 54px;
+  white-space: nowrap;
+  color: #575756; /* #7d3c93; */
+  text-decoration: none;
+};
+
+.navigation-top .navbar-brand a:hover {
+text-decoration: none;
+cursor: default}
+ .va-helper {  /*   .navigation-top .navbar-brand   */
+  display: inline-block;
+  font-size: 1.0em;
+  margin-left: 2em;
+  vertical-align: middle;
+  line-height: 54px; 
+}
+.navigation-top .navbar-brand img {
+  vertical-align: middle;
+  max-height: 54px;
+  display: inline-block;
+  margin-right: 0.8em;
+}
+.navigation-top .navbar-nav {
+  margin: 4px 0 0 0;
+}
+.navigation-top .navbar-nav li {
+  margin: 0;
+}
+.navigation-top .navbar-nav li a {
+  color: #575756;
+  padding: 12px 12px 9px 12px;
+  margin: 4px;
+}
+.navigation-top .navbar-nav li a:hover {
+  color: #7d3c93;
+}
+.navigation-top .navbar-nav li a.btn {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 9px 12px 7px 12px;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+.navigation-top .navbar-nav li:last-of-type .btn {
+  margin-right: 0;
+}
+.navigation-top.navbar-hidden {
+  display: none; 
+}
+/* 11. Header Full Screen Img
+--------------------------------------------*/
+.header-full-screen-img {
+  background: url('../img/header-background.jpg') 27% center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 8%;
+
+}
+.header-full-screen-img .logo {
+  margin-bottom: 15px;
+}
+.header-full-screen-img h2 {
+  color: #e0e0e0;
+}
+.header-full-screen-img h1 {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0;
+  text-transform: uppercase;
+  color: #e0e0e0; 
+}
+.header-full-screen-img h1 b {
+  font-weight: 300;
+  color: #e0e0e0;
+}
+.header-full-screen-img p {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #e0e0e0;
+}
+.header-full-screen-img .scroll-down {
+  border: 3px solid #ffffff;
+  width: 74px;
+  height: 74px;
+  display: inline-block;
+  margin-left: -37px;
+  -webkit-border-radius: 74px;
+  -moz-border-radius: 74px;
+  border-radius: 74px;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 74px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+}
+.header-full-screen-img .scroll-down i {
+  line-height: inherit;
+}
+.fullscreen {
+  width: 100%;
+  min-height: 100%;
+}
+.not-fullscreen,
+.fullscreen.not-overflow {
+  height: 100%;
+  overflow: hidden;
+}
+/* 12. Features Img
+--------------------------------------------*/
+.features-img {
+  padding-top: 65px;
+  overflow: hidden;
+}
+.features-img h2 {
+  font-size: 35px;
+  padding: 0;
+  margin: 0 0 1.3em 0; /* 45 80px  */
+  font-weight: 300;
+  line-height: 1.2;
+}
+.features-img h2 small {
+  font-size: 37%;
+  color: #7d3c93;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.features-img .feature-img {
+  padding-bottom: 2px;
+  border-bottom: 6px solid #cea7db;
+}
+.features-img h3 {
+  font-size: 27px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #7d3c93;
+}
+.features-img p {
+  margin-bottom: 0px;
+}
+/* 13. Newsletter Simple #804595
+--------------------------------------------*/
+.newsletter-simple {
+  background:  url('../img/newsletter-background.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+.newsletter-simple .newsletter-call-out {
+  display: inline-block;
+  margin-top: 1px;
+}
+.newsletter-simple .newsletter-call-out i {
+  font-size: 70px;
+  float: left;
+  margin-top: -9px;
+  color: #ffffff;
+}
+.newsletter-simple .newsletter-call-out h2 {
+  font-size: 30px;
+  margin: -7px 0px -2px 90px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.newsletter-simple .newsletter-call-out p {
+  font-size: 18px;
+  margin: 0 0 0 90px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* 14. Content Img Left
+--------------------------------------------*/
+.content-img-left h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.content-img-left h3 {
+  font-size: 20px;
+  color: #7d3c93;
+  font-weight: 300;
+}
+.content-img-left h3 span {
+  font-size: 14px;
+  color: #707070;
+}
+.content-img-left p:last-of-type {
+  margin-bottom: 0;
+}
+.content-img-left .content-img {
+  text-align: left;  
+}
+.content-img-left .content-img img {
+  display: inline-block;
+}
+/* 15. Content Img Right
+--------------------------------------------*/
+.content-img-right h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.content-img-right h3 {
+  font-size: 20px;
+  color: #7d3c93;
+  font-weight: 300;
+}
+.content-img-right h3 span {
+  font-size: 14px;
+  color: #707070;
+}
+.content-img-right p:last-of-type {
+  margin-bottom: 0;
+}
+.content-img-right .content-img {
+  float: right;
+  text-align: left; 
+}
+.content-img-right .content-img img {
+  display: inline-block;
+}
+.bg-color {
+  background-color: #f5f5f5;
+}
+.bottom-line {
+  border-bottom: 1px solid #e5e9ec;
+}
+/* 16. Product Info
+--------------------------------------------*/
+.product-info {
+  background-color: #f7f7f7;
+  background: #fcfcfc url('../img/product-info-pbg.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+.product-info h2 {
+  font-size: 35px;   /* Мужская сила ... 48 px */
+  margin: 0 0 4% 0;
+  font-weight: 300;
+}
+.product-info h3 {
+  font-weight: 300;
+  color: #7d3c93;
+}
+.product-info ul {
+  margin: 20px 0 0 0;
+  display: inline-block;
+}
+.product-info ul li {
+  margin-bottom: 18px;
+}
+.product-info ul li i {
+  color: #7d3c93;
+  font-size: 22px !important;
+  width: 25px;
+  text-align: left; /* center */
+  margin-right: 5px;
+}
+.product-info p {
+  margin: 0 0 0 0;
+}
+.product-info .product-info-img {
+  /* margin: -78px 0 -85px 0;*/
+  display: block;
+  /* text-align: center; */
+}
+/* 17. Tab Content
+--------------------------------------------*/
+.tab-content h2 {
+  font-size: 35px;  /* Процедуры 48px */
+  padding: 0;
+  margin: 0 0 80px 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.tab-content h2 small {
+  font-size: 37%;
+  color: #7d3c93;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.tab-content .tab-content-nav {
+  border-bottom: 1px solid #b5bcc5;
+}
+.tab-content .nav-tabs {
+  border: none;
+  margin: 0 auto;
+  display: table;
+}
+.tab-content .nav-tabs li a {
+  font-size: 16px;
+  font-weight: normal;
+  color: #575756;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid #b5bcc5;
+  background: none;
+  margin: 0 1px 0 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.tab-content .nav-tabs li a:hover {
+  color: #7d3c93;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid #7d3c93;
+}
+.tab-content .nav-tabs li.active a {
+  color: #7d3c93;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid #7d3c93;
+}
+.tab-content .tab-content {
+  padding: 85px 0;
+  border-bottom: 1px solid #b5bcc5;
+}
+.tab-content .tab-content h3 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+.tab-content .tab-content h4 {
+  font-size: 20px;
+  color: #7d3c93;
+  font-weight: 300;
+}
+.tab-content .tab-content p:last-of-type {
+  margin-bottom: 0;
+}
+.tab-content .tab-content .tab-content-img {
+  padding-bottom: 2px;
+  border-bottom: 6px solid #cea7db;
+}
+/*  Horizontal Gallery / scroll
+--------------------------------------------*/
+.section {
+  display: flex;
+  gap: 2px;
+  max-width: auto; /* 450px */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 1rem;
+  padding: 1rem;
+  margin: 3rem auto 0;
+}
+
+.section__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 390px;
+  width: 30px;
+  height: auto; /* 150px */
+  scroll-snap-align: start;
+  font-size: 1.5rem;
+  /*  cursor: pointer;*/
+}
+/* Other styles */
+.carus {
+  padding: 0rem;
+}
+/* 18. Text Animation
+--------------------------------------------*/
+.wow2 {
+  opacity: 0;
+  animation: wow2 2.0s forwards;
+}
+
+@keyframes wow2 {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*-- Vertical Animation --*/
+#vertical-animation-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sentence {
+  width: 100%;
+}
+
+#sliding-text {
+  display: inline;
+}
+
+#sliding-text span {
+  animation: topToBottom 6s ease-out infinite 0s;
+  -ms-animation: topToBottom 6s ease-out infinite 0s;
+  -webkit-animation: topToBottom 6s ease-out infinite 0s;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  margin: 0 8px;
+  padding: 0 0px;
+}
+
+#sliding-text span:nth-child(2){
+  animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+#sliding-text span:nth-child(3){
+  animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+}
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+  0% { opacity: 0; }
+  5% { opacity: 0; -moz-transform: translateY(-50px); }
+  10% { opacity: 1; -moz-transform: translateY(0px); }
+  25% { opacity: 1; -moz-transform: translateY(0px); }
+  30% { opacity: 0; -moz-transform: translateY(50px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+  0% { opacity: 0; }
+  5% { opacity: 0; -webkit-transform: translateY(-50px); }
+  10% { opacity: 1; -webkit-transform: translateY(0px); }
+  25% { opacity: 1; -webkit-transform: translateY(0px); }
+  30% { opacity: 0; -webkit-transform: translateY(50px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+  0% { opacity: 0; }
+  5% { opacity: 0; -ms-transform: translateY(-50px); }
+  10% { opacity: 1; -ms-transform: translateY(0px); }
+  25% { opacity: 1; -ms-transform: translateY(0px); }
+  30% { opacity: 0; -ms-transform: translateY(50px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+  0% { opacity: 0; }
+  5% { opacity: 0; transform: translateY(-50px); }
+  10% { opacity: 1; transform: translateY(5px); }
+  11% { opacity: 1; transform: translateY(0px); }
+  25% { opacity: 1; transform: translateY(0px); }
+  30% { opacity: 0; transform: translateY(50px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/* 19. Pricing Table
+--------------------------------------------*/
+.pricing-table {
+  padding-top: 0;
+}
+.pricing-table .pricing-table-comment {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+/* 20. Review Slider      
+--------------------------------------------*/
+.review-slider {
+  background: #ffe5fe url("../img/review-background.png") no-repeat;
+  background-position: 80% bottom   ;
+}
+.review-slider p {
+  margin-bottom: 1%;
+}
+.review-slider .reviews-content {
+  margin-left: 156px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 300;
+}
+.review-slider .reviews-image {
+  float: left;
+  margin-right: 30px;
+}
+.review-slider .reviews-image img {
+  -webkit-border-radius: 63px;
+  -moz-border-radius: 63px;
+  border-radius: 63px;
+  border: 1px solid #ffffff;
+}
+.review-slider .reviews-author {
+  margin-left: 156px;
+  color: #7d3c93;
+  font-size: 24px;
+  font-weight: 400;
+}
+.review-slider .reviews-author small {
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.review-slider .reviews-author small .reviews-author-rating {
+  margin-left: 10px;
+  display: inline-block;
+}
+.review-slider .item {
+  padding: 3px;
+}
+.review-slider .carousel-indicators {
+  margin: 15px 0 0 156px;
+  padding: 0;
+  bottom: auto;
+  left: auto;
+  width: auto;
+}
+.review-slider .carousel-indicators .active {
+  border: 2px solid #7d3c93;
+  background-color: transparent;
+  width: 13px;
+  height: 13px;
+}
+.review-slider .carousel-indicators li {
+  background-color: #7d3c93;
+  border: none;
+}
+/* 21. Partners
+--------------------------------------------*/
+/* 22. About Us Large
+--------------------------------------------*/
+.about-us-large h2 {
+  font-size: 35px;    /* О нас 48px */
+  padding: 0;
+  margin: 0 0 80px 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.about-us-large h2 small {
+  font-size: 37%;
+  color: #7d3c93;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.about-us-large .person {
+  z-index: 1000;
+}
+.about-us-large .person h2 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.about-us-large .person h3 {
+  font-size: 20px;
+  color: #7d3c93;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.about-us-large .person .person-img {
+  position: relative;
+  height: 265px;
+  width: inherit;
+  display: table-cell;
+  vertical-align: bottom;
+}
+.about-us-large .person .person-img img {
+  display: inline-block;
+}
+.about-us-large .person .person-img .person-img-background {
+  height: 200px;
+  width: 100%;
+  background-color: #e5e9ec;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.about-us-large .person:hover .person-img .person-img-background {
+  background-color: #e5d8e9;
+}
+.about-us-large .person .person-socialmedia {
+  list-style: none;
+  padding: 0;
+  margin: 25px auto 0 auto;
+}
+.about-us-large .person .person-socialmedia li {
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+  margin-right: 3px;
+}
+.about-us-large .person .person-socialmedia li a {
+  height: 44px;
+  width: 44px;
+  font-size: 18px;
+  background-color: #e5e9ec;
+  display: block;
+  text-align: center;
+  line-height: 44px;
+}
+.about-us-large .person .person-socialmedia li a i {
+  margin: 0;
+  color: #575756;
+  line-height: inherit;
+}
+.about-us-large .person .person-socialmedia li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #7d3c93;
+  z-index: 1;
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transform: scale3d(0.6, 0.6, 1);
+  transform: scale3d(0.6, 0.6, 1);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.about-us-large .person .person-socialmedia li a:hover {
+  background-color: #fff;
+  color: #7d3c93 !important;
+}
+.about-us-large .person .person-socialmedia li a:hover::before {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+.about-us-center {
+  display:flex; 
+  flex-direction:row; 
+  flex-wrap:wrap;
+  justify-content: center;
+}
+/* 24. Contact Gmap
+--------------------------------------------*/
+.contact-form-gmap h2 {
+  font-size: 35px;   /* Контакты 48px */
+  padding: 0;
+  margin: 0 0 80px 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.contact-form-gmap h2 small {
+  font-size: 37%;
+  color: #7d3c93;
+  text-transform: uppercase;
+}
+.contact-form-gmap .contact-info {
+  padding-bottom: 60px;
+  margin: 0 15px 60px 15px;
+  border-bottom: 1px solid #b5bcc5;
+}
+.contact-form-gmap .contact-info .address-icon,
+.contact-form-gmap .contact-info .phone-icon {
+  width: 86px;
+  height: 86px;
+  border: 2px solid #7d3c93;
+  text-align: center;
+  font-size: 48px;
+  color: #7d3c93;
+  line-height: 86px;
+  -webkit-border-radius: 43px;
+  -moz-border-radius: 43px;
+  border-radius: 43px;
+  float: left;
+}
+.address-icon, .phone-icon {
+  margin-right: 10px;
+}
+.phone-icon::-webkit-scrollbar,
+.address-icon::-webkit-scrollbar,
+.tab-content-nav::-webkit-scrollbar,
+.carousel::-webkit-scrollbar, 
+.footer-simple::-webkit-scrollbar,
+.product-info::-webkit-scrollbar {
+  display: none;
+}
+.contact-form-gmap .contact-info p {
+  margin-left: 106px;
+  font-size: 18px;
+  padding-top: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.contact-form-gmap .map {
+  height: 445px;
+  border-radius: 2px;
+}
+.contact-form-gmap form label {
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact-form-gmap form input {
+  box-shadow: 0px 1px 0px #e5d8e9;
+}
+.contact-form-gmap form textarea {
+  height: 143px;
+  box-shadow: 0px 1px 0px #e5d8e9;
+}
+.contact-form-gmap form .form-actions {
+  margin-top: 25px;
+}
+.contact-form-gmap form .btn-submit i {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.contact-form-gmap form .form-info {
+  font-size: 14px;
+  margin-top: 17px;
+}
+/* 25. Footer Simple
+--------------------------------------------*/
+.footer-simple {
+  background-color: #e5e9ec;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.footer-simple p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.footer-simple .social-media {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+.footer-simple .social-media li {
+  display: inline-block;
+  float: right;
+}
+.footer-simple .social-media li a {
+  padding: 0 10px;
+}
+.footer-simple .social-media li a:hover {
+  color: #575756;
+}
+/* 26. Appointment Modal
+--------------------------------------------*/
+/* 27. Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) {
+  /* 1. Default Configs (1200px)
+  --------------------------------------------*/
+  body {
+    line-height: 140%;
+    font-size: 14px;
+  }
+  section {
+    padding: 60px 0;
+  }
+  /* 4. Buttons (1200px)
+  --------------------------------------------*/
+  .btn.btn-lg {
+    font-size: 17px;
+    padding: 13px 20px 11px 20px;
+  }
+  /* 3. Form Elements (1200px)
+  --------------------------------------------*/
+  .form-control {
+    height: 41px;
+  }
+  /* 10. Navigation Top (1200px)
+  --------------------------------------------*/
+  .navigation-top {
+    font-size: 12px;
+  }
+  .navigation-top .navbar-nav {
+    margin: 4px 0 0 0;
+  }
+  .navigation-top .navbar-nav li a {
+    padding: 12px 8px 9px 8px;
+  }
+  .navigation-top .navbar-nav li a.btn {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 9px 12px 7px 12px;
+    margin-top: 7px;
+  }
+  .navigation-top .navbar-nav li a.btn:hover {
+    color: #7d3c93;
+  }
+  /* 11. Header Full Screen Img (1200px)  
+  --------------------------------------------*/
+  .header-full-screen-img { 
+    padding-top: 69%;
+    background-position: 45% 50%;
+  }
+  .header-full-screen-img h1 {
+    font-size: 42px;
+  }
+  .header-full-screen-img p {
+    font-size: 21px;
+  }
+  .header-full-screen-img .scroll-down {
+    width: 46px;
+    height: 46px;
+    -webkit-border-radius: 46px;
+    -moz-border-radius: 46px;
+    border-radius: 46px;
+    font-size: 36px;
+    line-height: 46px;
+    bottom: 18px;
+  }
+  /* 12. Features Img (1200px)
+  --------------------------------------------*/
+  .features-img h2 {
+    font-size: 42px;
+    margin-bottom: 45px;
+    background-position: 50% 50%;
+  }
+  .features-img h3 {
+    font-size: 21px;
+  }
+  /* 13. Newsletter Simple (1200px)
+  --------------------------------------------*/
+  .newsletter-simple {
+    background-attachment: scroll;
+  }
+  .newsletter-simple .newsletter-call-out i {
+    font-size: 61px;
+  }
+  .newsletter-simple .newsletter-call-out h2 {
+    font-size: 26px;
+    margin-left: 70px;
+  }
+  .newsletter-simple .newsletter-call-out p {
+    font-size: 16px;
+    margin-left: 70px;
+  }
+  /* 14. Content Img Left (1200px)
+  --------------------------------------------*/
+  .content-img-left h2 {
+    font-size: 26px;
+  }
+  .content-img-left h3 {
+    font-size: 18px;
+  }
+  /* 15. Content Img Right (1200px)
+  --------------------------------------------*/
+  .content-img-rigth h2 {
+    font-size: 26px;
+  }
+  .content-img-rigth h3 {
+    font-size: 18px;
+  }
+  /* 16. Product Info (1200px)
+  --------------------------------------------*/
+  .product-info {
+    background-attachment: scroll;
+  }
+  .product-info h2 {
+    font-size: 42px;
+  }
+  .product-info h3 {
+    font-size: 18px;
+  }
+  .product-info .product-info-img img {
+    width: 82.5%;
+  }
+  /* 17. Tab Content (1200px)
+  --------------------------------------------*/
+  .tab-content h2 {
+    font-size: 42px;
+    margin-bottom: 65px;
+  }
+  /* 18. Gallery (1200px)
+  --------------------------------------------*/
+  .gallery .gallery-container {
+    padding: 65px 0;
+  }
+  .gallery .gallery-container .gallery-thumbnail-container {
+    height: 190px;
+  }
+  .gallery .gallery-container .gallery-thumbnail-container {
+    height: 190px;
+  }
+  /* 19. Pricing Table (1200px)
+  --------------------------------------------*/
+  /* 20. Review Slider (1200px)
+  --------------------------------------------*/
+  .review-slider .reviews-image {
+    margin-right: 0px;
+  }
+  .review-slider .reviews-image img {
+    width: 80%;
+  }
+  .review-slider .reviews-content {
+    font-size: 18px;
+    margin-left: 126px;
+  }
+  .review-slider .reviews-author {
+    font-size: 18px;
+    margin-left: 126px;
+  }
+  .review-slider .carousel-indicators {
+    margin-left: 126px;
+  }
+  /* 21. Partners (1200px)
+--------------------------------------------*/
+  .partners h2 {
+    font-size: 18px;
+    margin-bottom: 55px;
+  }
+  /* 22. About Us Large (1200px)
+  --------------------------------------------*/
+  .about-us-large h2 {
+    font-size: 42px;
+    margin-bottom: 65px;
+  }
+  .about-us-large .person h2 {
+    font-size: 26px;
+  }
+  .about-us-large .person h3 {
+    font-size: 18px;
+  }
+  .about-us-large .person .person-socialmedia li a {
+    height: 39px;
+    width: 39px;
+    font-size: 16px;
+    line-height: 39px;
+  }
+  /* 24. Contact Gmap (1200px)
+  --------------------------------------------*/
+  .contact-form-gmap h2 {
+    font-size: 42px;
+    margin-bottom: 65px;
+  }
+  .contact-form-gmap .contact-info {
+    padding-bottom: 45px;
+  }
+  .contact-form-gmap .contact-info .address-icon,
+  .contact-form-gmap .contact-info .phone-icon {
+    width: 72px;
+    height: 72px;
+    border: 2px solid #7d3c93;
+    text-align: center;
+    font-size: 40px;
+    color: #7d3c93;
+    line-height: 72px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    border-radius: 36px;
+    float: left;
+  }
+  .contact-form-gmap .contact-info p {
+    margin-left: 92px;
+    font-size: 14px;
+  }
+  .contact-form-gmap .map {
+    height: 413px;
+  }
+  .contact-form-gmap form label {
+    font-size: 12px;
+  }
+  .contact-form-gmap form .form-info {
+    font-size: 12px;
+  }
+  /* 25. Footer Simple (1200px)
+  --------------------------------------------*/
+  .footer-simple p {
+    font-size: 12px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  /* 1. Default Configs (992px)
+  --------------------------------------------*/
+  body {
+    text-align: left;
+  }
+  .img-responsive {
+    width: 100%;
+  }
+  /* 11. Header Full Screen Img (992px)
+  --------------------------------------------*/
+  .header-full-screen-img {
+    padding-top: 73%;
+    background-position: 46% 50%;
+  }
+  .header-full-screen-img h1 {
+    font-size: 32px;
+  }
+  .header-full-screen-img p {
+    font-size: 16px;
+  }
+  .header-full-screen-img .scroll-down {
+    width: 46px;
+    height: 46px;
+    -webkit-border-radius: 46px;
+    -moz-border-radius: 46px;
+    border-radius: 46px;
+    font-size: 36px;
+    line-height: 46px;
+    bottom: 18px;
+  }
+  /* 12. Features Img (992px)
+  --------------------------------------------*/
+  .features-img h2 {
+    font-size: 36px;
+  }
+  .features-img p {
+    margin-bottom: 12%;
+  }
+  /* 13. Newsletter Simple (992px)
+  --------------------------------------------*/
+  .newsletter-simple .newsletter-call-out {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  /* 14. Content Img Left and Right (992px)
+  --------------------------------------------*/
+  .content-img-left h2,
+  .content-img-right h2 {
+    margin-top: 4%;
+  }
+  /* 15. Content Img Right (992px)
+  --------------------------------------------*/
+  .content-img-right p:last-of-type {
+    margin-bottom: 65px;
+  }
+  .content-img-right .content-img {
+    float: none;
+  }
+  /* 16. Product Info (992px)
+--------------------------------------------*/
+  .product-info h2 {
+    font-size: 36px;
+  }
+  .product-info .product-info-img {
+    margin: 0 0 -65px 0;
+  }
+  /* 17. Tab Content (992px)
+--------------------------------------------*/
+  .tab-content .tab-content {
+    padding: 45px 0;
+  }
+  .tab-content .tab-content .tab-content-img {
+    margin-bottom: 45px;
+  }
+  .tab-content .tab-content p:last-of-type {
+    margin-bottom: 45px;
+  }
+  /* 18. Gallery (992px)
+  --------------------------------------------*/
+  .gallery .gallery-container .gallery-thumbnail-container:hover .gallery-thumbnail-overlay {
+    padding-top: 16%;
+  }
+  .gallery .gallery-container .gallery-thumbnail-container {
+    height: auto;
+  }
+  /* 19. Pricing Table (992px)
+  --------------------------------------------*/
+  /* 20. Review Slider (992px)
+  --------------------------------------------*/
+  .review-slider .reviews-content {
+    margin-left: 0;
+    line-height: 1.6;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  .review-slider .reviews-image {
+    width: 126px;
+    float: none;
+    margin: 0 auto 25px auto;
+  }
+  .review-slider .reviews-author {
+    margin-left: 0;
+    line-height: 1.6;
+  }
+  .review-slider .reviews-author small {
+    display: block;
+  }
+  .review-slider .carousel-indicators {
+    position: relative;
+    margin: 15px 0 0 0;
+    padding: 0;
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
+  .review-slider .carousel-indicators .active {
+    border: 2px solid #7d3c93;
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+  }
+  .review-slider .carousel-indicators li {
+    background-color: #7d3c93;
+    border: none;
+  }
+  /* 21. Partners (992px)
+  --------------------------------------------*/
+  .partners h2 {
+    font-size: 18px;
+    margin-bottom: 55px;
+  }
+  .partners .partner-brands {
+    height: auto;
+  }
+  .partners .partner-brands .partner {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: middle;
+    position: relative;
+    top: auto ;
+    transform: translateY(0);
+    margin-bottom: 65px;
+  }
+  .partners .partner-brands .partner img {
+    display: inline-block;
+    width: auto;
+  }
+  /* 22. About Us Large (992px)
+  --------------------------------------------*/
+  .about-us-large h2 {
+    font-size: 36px;
+  }
+  .about-us-large p {
+    margin-bottom: 5%;
+  }
+  .about-us-large .person {
+    margin-bottom: 65px;
+  }
+  .about-us-large .person .person-img {
+    display: inline-table;
+  }
+  /* 24. Contact Gmap (992px)
+  --------------------------------------------*/
+  .contact-form-gmap h2 {
+    font-size: 24px;
+  }
+  .contact-form-gmap .contact-info {
+    padding-bottom: 0;
+  }
+  .contact-form-gmap .contact-info .address-icon,
+  .contact-form-gmap .contact-info .phone-icon {
+   /* float: none;
+    margin: 0 auto; */
+  }
+  .contact-form-gmap .contact-info p {
+    margin: 0;
+    padding-bottom: 45px;
+  }
+  .contact-form-gmap .map {
+    margin-bottom: 45px;
+  }
+  /* 25. Footer Simple (992px)
+  --------------------------------------------*/
+  .footer-simple p {
+    margin-bottom: 20px;
+  }
+  .footer-simple .social-media {
+    text-align: center;
+  }
+  .footer-simple .social-media li {
+    display: inline-block;
+    float: none;
+  }
+}
+/* Small devices (660px and down) */
+@media (max-width: 660px) {
+  /* 2. Preloader
+  --------------------------------------------*/
+body div:not(.carousel):not(.carus) { 
+  overflow-x: hidden; 
+}
+p {
+  margin: 0 0 2% 0;
+}
+  #page-preloader .logo-prelaoder {
+    margin-bottom: 20px;
+    width: 100px;
+  }
+  #page-preloader h1 {
+    font-size: 24px;
+  }
+  .spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 80px auto;
+  }
+  .hidden-xs {
+    display: none !important;
+  }
+  /* 10. Navigation Top
+  --------------------------------------------*/
+  .navigation-top .navbar-brand img {
+    max-width: 190px;
+    margin-left: 10px;
+  }
+  /* 11. Header Full Screen Img (660px)   
+  --------------------------------------------*/
+  .header-full-screen-img {
+    padding-top: 100%;
+    background: url('../img/mobile-bg.jpg');
+    background-position: 50% 50%;
+  }
+  .header-full-screen-img h1 {
+    font-size: 18px;
+  }
+  .header-full-screen-img p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .header-full-screen-img .logo {
+    width: 100px;
+    margin-bottom: 0px;
+  }
+  .header-full-screen-img .scroll-down {
+    margin-left: -22px;
+  }
+  /* 12. Features Img (660px)
+  --------------------------------------------*/
+  .features-img h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .features-img h2 small {
+    font-size: 12px;
+  }
+  .features-img p {
+    margin-bottom: 5%;
+  }
+  .features-img h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .features-img h4 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .features-img {
+    padding-top: 10px;
+  }
+ .features-img .text-center {
+    text-align: left;
+ }
+  /* 13. Newsletter Simple
+  --------------------------------------------*/
+  .newsletter-simple .newsletter-call-out i {
+    display: block;
+    margin-bottom: 24px;
+    float: none;
+    text-align: center;
+  }
+  .newsletter-simple .newsletter-call-out h2 {
+    margin: -7px 0px -2px 0px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .newsletter-simple .newsletter-call-out p {
+    margin: 0px;
+    font-size: 12px;
+    text-align: center;
+  }
+  /* 14. Content Img Left
+  --------------------------------------------*/
+  .content-img-left h2 {
+    font-size: 22px;
+  }
+  .content-img-left h3 {
+    font-size: 16px;
+  }
+  .content-img-left p:last-of-type {
+    margin-bottom: 0;
+  }
+  /* 15. Content Img Right
+  --------------------------------------------*/
+  .content-img-right h2 {
+    font-size: 22px;
+  }
+  .content-img-right h3 {
+    font-size: 16px;
+  }
+  .content-img-right p:last-of-type {
+    margin-bottom: 0;
+  }
+  .content-img-right .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* 16. Product Info
+  --------------------------------------------*/
+  .product-info h2 {
+    font-size: 24px;
+  }
+  .product-info ul li {
+    margin-bottom: 20px;
+  }
+  .product-info ul li i {
+    display: block;
+    margin: 0 44%;
+    margin-bottom: 10px;
+    font-size: 32px !important;
+  }
+  /* 17. Tab Content
+  --------------------------------------------*/
+  .tab-content h2 {
+    font-size: 24px;
+     margin: 0 0 7px 0;
+  }
+  .tab-content h2 small {
+    font-size: 12px;
+  }
+  .tab-content .nav-tabs li {
+    display: block;
+    width: 100%;
+  }
+  .tab-content-nav, div .tab-content {
+    visibility: hidden;
+    display: none;
+  }
+  /* 18. Accordion
+  --------------------------------------------*/ 
+.accordion {
+  visibility: visible;
+  display: block;
+}  
+.transition, ul li i:before, ul li i:after, p {
+  transition: all 0.25s ease-in-out;
+}
+.flipIn, .accordion ul li, .accordion h1 {
+  animation: flipdown 0.5s ease both;
+}
+.no-select, .accordion h2 {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.accordion {
+  width: 100%;
+  height: 100%;
+  perspective: 900;
+  /*overflow-y: scroll;*/
+  background-color: #dce7eb;
+  color: rgba(48, 69, 92, 0.8);
+}
+.acco {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 6px 0 0 #7d3c93 inset;
+  background-color: #fefffa;
+  padding: 15px 0px;
+  box-sizing: border-box;
+  transform: translate(0, 0);
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  left: 0;
+}
+.accordion h1, .accordion h2 {
+  color: #7d3c93;
+}
+.accordion h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.accordion h2 {
+  font-size: 17px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  background-color: #fefffa;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.accordion p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 17px;
+  line-height: 26px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+.accordion ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 2px dotted #dce7eb;
+}
+.accordion ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion ul li:last-of-type {
+  padding-bottom: 0;
+}
+.accordion ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  margin-right: 25px;
+  right: 0;
+}
+.accordion ul li i:before, .accordion ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #7d3c93;
+  width: 3px;
+  height: 9px;
+}
+.accordion ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.accordion ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}     
+  /* 19. Pricing Table
+  --------------------------------------------*/
+  /* 22 About Us Large
+  --------------------------------------------*/
+  .about-us-large h2 {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+  .about-us-large h2 small {
+    font-size: 12px;
+  }
+}
+/* Extra Small devices (480px and down) */
+/* 28. Change default Nav Breakpoint */
+@media (max-width: 992px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+}
+/* Small devices (440px and down) */
+@media (max-width: 440px) {
+/* 11. Header Full Screen Img (400px)   
+--------------------------------------------*/
+  body p {
+    font-size: 17px;
+  }
+  section {
+    padding: 35px 0; 
+  }
+  .header-full-screen-img p {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .navigation-top {
+    padding: 4px 0 4px 0;
+  }
+  .navigation-top .navbar-brand {
+    padding: 0;
+    height: 40px;
+  }
+  .navigation-top .navbar-brand img {
+    max-height: 40px;
+  }
+  .va-helper { 
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 2em;
+    vertical-align: middle;
+    line-height: 40px; 
+  }
+  .navbar-toggle {
+    margin-top: 4px;
+    margin-right: 15px;
+    margin-bottom: 4px; /* 8px */
+  }
+  .header-full-screen-img {
+    padding-top: 91%;
+  } 
+  .features-img h2 {
+    font-size: 24px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+  .content-img-left h2,
+  .content-img-right h2 {
+    margin-top: 0.9em;
+  }
+  .pricing-table .pricing-table-comment {
+    text-align: left;
+  }
+}
+/* Small devices (400px and down) */
+@media (max-width: 400px) and (max-height: 700px) {
+/* 11. Header Full Screen Img (400px x 700px)   
+--------------------------------------------*/
+  .header-full-screen-img {
+    padding-top: 68%;
+    background-position: 50% 39%;
+  }
+}
+/*# sourceMappingURL=styles.min.css.map */
